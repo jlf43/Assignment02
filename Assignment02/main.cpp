@@ -13,13 +13,14 @@ Employee* get_type()
 	cin >> type;
 
 	type = toupper(type);
+	// IN CASE THE USER ACCIDENTALLY TYPE OTHER CHARACTERS BESIDES P OR N
 	while (type != 'P' && type != 'N')
 	{
 		cout << "Invalid. Please try again. 'P' or 'N':" << endl;
 		cin >> type;
 		type = toupper(type);
 	}
-
+	// THIS WILL CREATE AN INSTANCE OF EITHER THE PROFESSIONAL INSTANCE OR THE NONPROFESSIONAL INSTANCE
 	if (type == 'P')
 	{
 		cout << "\nEmployment type: Professional employee\n" << endl;
@@ -47,6 +48,8 @@ int main()
 		cin >> x;
 	}
 	cout << endl;
+
+	// X WILL BE RESET TO ZERO AND INCREMENT UP UNTIL Y TO SHOWCASE THE X AMOUNT OF TIMES THE USER WANTED TO ENTER PEOPLE'S NAMES
 	y = x;
 	x = 0;
 	while (x < y)

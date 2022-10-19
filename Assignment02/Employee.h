@@ -12,11 +12,12 @@ protected:
 	double insurance;
 	int years_worked;
 public:
-
+	// PURE VIRTUAL FUNCTIONS
 	virtual void salary() const = 0;
 	virtual void vaca() const = 0;
 	virtual void health_care() const = 0;
 	virtual void display() const = 0;
+
 	void user_name()
 	{
 		cout << "Last name: ";

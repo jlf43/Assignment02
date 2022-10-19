@@ -7,12 +7,14 @@ using namespace std;
 
 class Professional : public Employee
 {
-protected:
 public:
+	// PROFESSIONAL EMPLOYEES GET PAID MONTHLY. THEY ALL WORK 40 HOURS EVERY WEEK WITH NO OVERTIME PAY (ASSUMING THAT THERE ARE 4 WEEKS IN A MONTH)
 	void salary() const
 	{
 		cout << "You are earning a monthly salary. You earn $" << hourlypay * 160 << " a month." << endl << endl;
 	}
+
+	// THIS WILL DETERMINE THE NUMBER OF VACATION DAYS AN EMPLOYEE WILL RECIEVE. THERE ARE THREE GROUPS AND THEY DIFFER BY 3 DAYS. BUT WITHIN EACH GROUP, THERE IS A ONE DAY DIFFERENCE
 	void vaca() const
 	{
 		if (years_worked <= 5)
@@ -35,12 +37,15 @@ public:
 			}
 		}
 	}
+
+	// FOR HEALTH CONTRIBUTION, THE COMPANY WILL PAY 75% OF THE INSURANCE FEE AND MAKE THE EMPLOYEE PAY 25%
 	void health_care() const
 	{
 		cout << "Because you are a professional worker, we pay 75% of the insurance." << endl;
 		cout << "You have to pay only $" << insurance * 0.25 << " annually for your insurance coverage." << endl << endl;
 	}
 
+	// THIS WILL DISPLAY ALL THE INFORMATION THE USER HAS INPUTED.
 	void display() const
 	{
 		cout << setfill('-') << setw(35) << "-" << endl;
